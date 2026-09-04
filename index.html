@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fff0f5">
+  <title>A Little Birthday Surprise ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="background-hearts" aria-hidden="true"></div>
+
+  <main id="app">
+    <!-- INTRO / ENVELOPE -->
+    <section id="intro" class="scene active">
+      <div class="intro-content">
+        <p class="eyebrow">A special message for you</p>
+        <h1>Happy Birthday! 🎂</h1>
+        <p class="hint">Check the envelope.</p>
+
+        <button id="envelopeButton" class="envelope-button" aria-label="Open your birthday letter">
+          <span class="envelope">
+            <span class="envelope-back"></span>
+            <span class="letter-preview"></span>
+            <span class="envelope-front"></span>
+            <span class="envelope-flap"></span>
+            <span class="envelope-heart"></span>
+          </span>
+        </button>
+
+        <p class="tap-text">tap to open</p>
+      </div>
+    </section>
+
+    <!-- BOOK -->
+    <section id="bookScene" class="scene">
+      <div class="book-wrap">
+        <div class="book">
+          <div class="book-spine"></div>
+
+          <article class="page active-page" data-page="0">
+            <span class="page-number">01</span>
+            <p class="small-title">Hi Alchester,</p>
+            <h2>This is my gift to you.</h2>
+            <p>
+              Dati ginawan mo 'ko ng birthday gift website. Mag animate sana ako in return kaso ang hirap pala. But
+              still,
+              I wanted to make something myself instead of simply buying you gift.
+            </p>
+            <p class="signature">— Edison</p>
+          </article>
+
+          <article class="page" data-page="1">
+            <span class="page-number">02</span>
+            <p class="small-title">For your birthday.</p>
+            <h2>You deserve a really good day.</h2>
+            <p>
+              I hope today gives you plenty of reasons to smile, laugh,
+              eat something delicious, and forget about anything stressful for a while.
+            </p>
+            <div class="doodle">✦ ♡ ✦</div>
+          </article>
+
+          <article class="page" data-page="2">
+            <span class="page-number">03</span>
+            <p class="small-title">Also..</p>
+            <h2>You're pretty cool.</h2>
+            <p>
+              And since you're an animator, I figured making a little animated
+              birthday surprise would be more appropriate than a normal gift.
+            </p>
+            <p class="tiny-note">Kunwari animation nalang siya.</p>
+          </article>
+
+          <article class="page" data-page="3">
+            <span class="page-number">04</span>
+            <p class="small-title">One more thing</p>
+            <h2>I made you a little drawing.</h2>
+            <p>
+              May reference nga yan haha. Though it may not be perfect, I hope you appreciate it.
+            </p>
+            <div class="doodle big">(╯°□°）╯</div>
+          </article>
+
+          <article class="page" data-page="4">
+            <span class="page-number">05</span>
+            <p class="small-title">Ready?</p>
+            <h2>There's a present waiting.</h2>
+            <p>
+              Close the book and open the gift when you're ready.
+            </p>
+            <button id="toGiftButton" class="primary-button">Open the gift →</button>
+          </article>
+        </div>
+
+        <div class="book-controls">
+          <button id="prevPage" class="control-button" disabled>← Previous</button>
+          <span id="pageCounter">1 / 5</span>
+          <button id="nextPage" class="control-button">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIFT -->
+    <section id="giftScene" class="scene">
+      <div class="gift-content">
+        <p class="eyebrow">For you ♡</p>
+        <h2>There is a little gift here.</h2>
+
+        <button id="giftButton" class="gift-button" aria-label="Open the gift">
+          <span class="gift">
+            <span class="gift-lid"></span>
+            <span class="gift-box"></span>
+            <span class="gift-ribbon-v"></span>
+            <span class="gift-ribbon-h"></span>
+            <span class="bow bow-left"></span>
+            <span class="bow bow-right"></span>
+          </span>
+        </button>
+
+        <p id="giftHint" class="hint">tap the gift</p>
+      </div>
+    </section>
+
+    <!-- DRAWING -->
+    <section id="drawingScene" class="scene">
+      <div class="reveal-card">
+        <p class="eyebrow">I made this for you</p>
+        <h2>My little drawing ♡</h2>
+
+        <div class="drawing-frame">
+          <!-- Replace images/birthday-drawing.svg with your own drawing if desired -->
+          <img id="drawingImage" src="images/birthday-drawing.svg" alt="A birthday drawing">
+        </div>
+
+        <p class="drawing-caption">
+          Still learning, but I hope you like it. ♡
+        </p>
+
+        <button id="toCakeButton" class="primary-button">There's one last thing →</button>
+      </div>
+    </section>
+
+    <!-- CAKE -->
+    <section id="cakeScene" class="scene">
+      <div class="cake-content">
+        <p class="eyebrow">One last wish...</p>
+        <h2>Make a wish. 🎂</h2>
+        <p id="blowMessage" class="blow-message">
+          Blow toward your microphone to put out the candle.
+        </p>
+
+        <div class="cake-area">
+          <div id="flame" class="flame" aria-label="Candle flame"></div>
+          <div class="candle">
+            <div class="candle-stripe"></div>
+          </div>
+          <div class="cake">
+            <div class="icing"></div>
+            <div class="cake-body"></div>
+            <div class="plate"></div>
+          </div>
+        </div>
+
+        <div class="cake-actions">
+          <button id="micButton" class="primary-button">🎤 Enable microphone</button>
+          <button id="blowButton" class="secondary-button hidden">Blow it out</button>
+        </div>
+
+        <p id="micStatus" class="mic-status"></p>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="finalScene" class="scene">
+      <div class="final-content">
+        <div class="confetti-layer" id="confettiLayer"></div>
+        <div class="final-heart">♥</div>
+        <p class="eyebrow">Happy Birthday</p>
+        <h1>Enjoy your day.</h1>
+        <p>
+          Sana may handa diyan.
+        </p>
+        <p class="final-signature">— from your mega best best super friend.</p>
+        <button id="restartButton" class="secondary-button">Replay ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <audio id="birthdayMusic" loop preload="auto">
+    <source src="audio/sleepless-jasmine.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
