@@ -214,7 +214,7 @@ function createConfetti() {
   const layer = document.getElementById("confettiLayer");
   layer.innerHTML = "";
 
-  const symbols = ["♡", "✦", "♥", "✧", "•"];
+  const symbols = ["❀", "✦", "✿", "✧", "•"];
 
   for (let i = 0; i < 45; i++) {
     const item = document.createElement("span");
