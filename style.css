@@ -103,7 +103,7 @@ p {
 /* Background */
 .background-hearts::before,
 .background-hearts::after {
-  content: "♡  ✦  ♡  ·  ✧  ♡";
+  content: "❀  ✦  ❀  ·  ✧  ✿";
   position: fixed;
   color: rgba(201,92,130,.13);
   font-size: 26px;
