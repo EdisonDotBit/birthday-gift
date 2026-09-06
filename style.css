@@ -665,3 +665,27 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* Extra */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+
+    background-color: #ff6b9d;
+    color: white;
+
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #ff477f;
+    transform: translateY(-2px);
+}
